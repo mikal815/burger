@@ -3,7 +3,7 @@ var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
 var exphbs  = require('express-handlebars');
 var app = express();
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 8080;
 
 app.use(bodyParser.urlencoded({ extended: false })); //Inteprets client POST data "false" only allows strings or arrays to be passed
 
