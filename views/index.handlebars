@@ -1,0 +1,27 @@
+<div id="content">
+    <h1 id="mainHeading"> Burger Time </h1>
+        <div id="devoured">
+            <h2>Ready to Eat</h2>
+                {{#each burgers}}
+                    {{#unless this.devoured}}
+                            <p>{{this.burger_name}} </p>
+                            <button class="devourButton">Eat</button>
+                            
+                    {{/unless}}
+                {{/each}}
+
+        </div> 
+        <div id="notDevoured">
+            <h2>Consumed</h2>
+                {{#each burgers}}
+                    {{#if this.devoured}}
+                        <p> {{this.burger_name}} </p>
+                        <button class="deleteButton">Delete</button>
+                                    
+                    {{/if}}
+                {{/each}}
+        </div>              
+        <input name="burgerInput" maxlength="25" placeholder="Add a burger"/>
+        <button>Submit</button>
+    </form> 
+</div>
